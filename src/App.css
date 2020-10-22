@@ -1,3 +1,6 @@
+/*Google font*/
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue:ital@1&display=swap");
+
 .App {
   text-align: center;
 }
@@ -35,4 +38,158 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.signOut {
+  background-color: transparent;
+  color: lightgray;
+  margin-top: 7px;
+  font-size: 25px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.container {
+  margin: 40px auto auto auto;
+  max-width: 1200px;
+}
+
+.app-profiles {
+  background-color: #292f38;
+  width: 25%;
+  min-width: 350px;
+  height: 700px;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+.app-details {
+  background-color: #292f38;
+  width: 15%;
+  min-width: 270px;
+  height: 305px;
+  padding: 10px;
+  margin: 10px 0px 30px 45px;
+  border-radius: 5px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+.app-dms {
+  background-color: #292f38;
+  width: 25%;
+  min-width: 380px;
+  height: 640px;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+.title-ask {
+  margin-right: 30px;
+}
+
+.badge {
+  background-color: transparent;
+  color: gray;
+  margin-right: 7px;
+  font-size: 22px;
+  border: none;
+  outline: none;
+}
+.photo {
+  background-color: transparent;
+  color: lightgray;
+  font-size: 30px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.user {
+  background-color: transparent;
+  color: lightgray;
+  margin-left: 10px;
+  font-size: 26px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.user-invalid {
+  background-color: transparent;
+  color: dimgray;
+  margin-left: 10px;
+  font-size: 26px;
+  border: none;
+  outline: none;
+  cursor: none;
+}
+.trash {
+  background-color: transparent;
+  color: lightgray;
+  font-size: 24px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+h3 {
+  color: black;
+  font-family: "Comic Neue", cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 20px;
+}
+
+.task-list {
+  width: 100%;
+  margin: auto;
+  max-height: 100%;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.list-item h4 {
+  color: lightgray;
+  font-family: "Comic Neue", cursive;
+}
+
+.btn-modal {
+  background-color: transparent;
+  color: gray;
+  margin-right: 7px;
+  font-size: 22px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.mail {
+  background-color: transparent;
+  color: lightgray;
+  margin-right: 25px;
+  font-size: 25px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+/*Scroller*/
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #aaa;
+}
+::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 10px;
 }
