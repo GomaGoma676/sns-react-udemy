@@ -13,7 +13,9 @@ import {
   START_FETCH,
   FETCH_SUCCESS,
   ERROR_CATCHED,
-  INPUT_EDIT,
+  //INPUT_EDIT,
+  INPUT_EDIT_LOG,
+  INPUT_EDIT_REG,
   TOGGLE_MODE,
 } from "./actionTypes";
 
@@ -85,10 +87,32 @@ const loginReducer = (state, action) => {
         isLoading: false,
       };
     }
-    case INPUT_EDIT: {
+    // case INPUT_EDIT: {
+    //   return {
+    //     ...state,
+    //     [action.inputName]: action.payload,
+    //     error: "",
+    //   };
+    // }
+    case INPUT_EDIT_LOG: {
       return {
         ...state,
-        [action.inputName]: action.payload,
+        //[action.inputName]: action.payload,
+        credentialsLog: {
+          ...state.credentialsLog,
+          [action.inputName]: action.payload,
+        },
+        error: "",
+      };
+    }
+    case INPUT_EDIT_REG: {
+      return {
+        ...state,
+        //[action.inputName]: action.payload,
+        credentialsReg: {
+          ...state.credentialsReg,
+          [action.inputName]: action.payload,
+        },
         error: "",
       };
     }
@@ -108,22 +132,26 @@ const Login = (props) => {
   const [state, dispatch] = useReducer(loginReducer, initialState);
 
   const inputChangedLog = () => (event) => {
-    const cred = state.credentialsLog;
-    cred[event.target.name] = event.target.value;
+    //const cred = state.credentialsLog;
+    //cred[event.target.name] = event.target.value;
     dispatch({
-      type: INPUT_EDIT,
-      inputName: "state.credentialLog",
-      payload: cred,
+      type: INPUT_EDIT_LOG,
+      //inputName: "state.credentialLog",
+      //payload: cred,
+      inputName: event.target.name,
+      payload: event.target.value,
     });
   };
 
   const inputChangedReg = () => (event) => {
-    const cred = state.credentialsReg;
-    cred[event.target.name] = event.target.value;
+    //const cred = state.credentialsReg;
+    //cred[event.target.name] = event.target.value;
     dispatch({
-      type: INPUT_EDIT,
-      inputName: "state.credentialReg",
-      payload: cred,
+      type: INPUT_EDIT_REG,
+      //inputName: "state.credentialReg",
+      //payload: cred,
+      inputName: event.target.name,
+      payload: event.target.value,
     });
   };
 
