@@ -81,6 +81,7 @@ const ProfileManager = () => {
           type="file"
           id="imageInput"
           hidden="hidden"
+          //hidden=true
           onChange={(event) => {
             setCover(event.target.files[0]);
             event.target.value = "";
